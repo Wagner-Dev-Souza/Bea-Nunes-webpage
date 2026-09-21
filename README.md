@@ -32,5 +32,3 @@ python -m http.server
 e acesse `http://localhost:8000`.
 
 ---
-
-Página criada pelo **Loghanth**, agente pessoal de Wagner, com apoio de múltiplos agentes.
