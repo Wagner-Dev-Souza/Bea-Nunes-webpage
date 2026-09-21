@@ -2,7 +2,7 @@
 
 > Página institucional para divulgação do atendimento veterinário domiciliar de cães e gatos, no Rio de Janeiro e Baixada Fluminense.
 
-🔗 **Publicada via GitHub Pages** · ⚠️ **Projeto de cliente** — a licença cobre **apenas o código** (ver *Direitos de imagem e conteúdo*)
+🔗 **[Ver a página publicada](https://wagner-dev-souza.github.io/Bea-Nunes-webpage/)** · ⚠️ **Projeto de cliente** — a licença cobre **apenas o código** (ver *Direitos de imagem e conteúdo*)
 
 ![stack](https://img.shields.io/badge/stack-HTML%20%7C%20CSS%20%7C%20JS%20puro-yellow)
 ![deploy](https://img.shields.io/badge/deploy-GitHub%20Pages-success)
@@ -24,7 +24,7 @@ Uma página única, rápida e focada em conversão, com três objetivos:
 
 ## 📸 Estrutura da página
 
-Seções: apresentação, sobre, serviços, depoimentos e contato — com galeria de fotos em *lightbox*.
+Seções: **sobre**, **diferenciais**, **atendimento**, **galeria** (com visualização ampliada das fotos) e **contato**.
 
 ```
 index.html                  # página única, com as seções e as metas de SEO
