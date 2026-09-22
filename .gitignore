@@ -3,3 +3,8 @@ Thumbs.db
 node_modules/
 *.log
 .vscode/
+
+# Saídas da suíte de testes
+cypress/screenshots/
+cypress/videos/
+cypress/downloads/

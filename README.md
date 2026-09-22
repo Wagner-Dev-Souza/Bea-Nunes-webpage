@@ -4,8 +4,10 @@
 
 🔗 **[Ver a página publicada](https://wagner-dev-souza.github.io/Bea-Nunes-webpage/)** · ⚠️ **Projeto de cliente** — a licença cobre **apenas o código** (ver *Direitos de imagem e conteúdo*)
 
+[![CI](https://github.com/Wagner-Dev-Souza/Bea-Nunes-webpage/actions/workflows/ci.yml/badge.svg)](https://github.com/Wagner-Dev-Souza/Bea-Nunes-webpage/actions/workflows/ci.yml)
 ![stack](https://img.shields.io/badge/stack-HTML%20%7C%20CSS%20%7C%20JS%20puro-yellow)
 ![deploy](https://img.shields.io/badge/deploy-GitHub%20Pages-success)
+![testes](https://img.shields.io/badge/testes-Cypress%20(16%20testes)-success)
 ![license](https://img.shields.io/badge/license-MIT%20(somente%20c%C3%B3digo)-blue)
 
 ---
@@ -58,6 +60,39 @@ python -m http.server 8000
 ```
 
 E acesse `http://localhost:8000`. Também funciona abrindo o `index.html` diretamente, já que a página não faz requisições externas.
+
+## 🧪 Testes
+
+**16 testes ponta a ponta em Cypress**, rodando automaticamente a cada push pelo GitHub Actions.
+
+```bash
+npm install
+npm run serve      # servidor local em http://localhost:8082
+npm test           # roda a suíte (em outro terminal)
+```
+
+### O que a suíte cobre
+
+**Estrutura e conteúdo** (`01-pagina.cy.js`) — título e idioma, descrição para busca e
+cartão de compartilhamento (Open Graph), as cinco seções da página, o cabeçalho com a
+navegação, a carga das imagens principais e o caminho de contato.
+
+**Interações** (`02-interacoes.cy.js`):
+
+- **Cabeçalho**: ganha sombra ao rolar e perde ao voltar ao topo
+- **Revelação ao rolar**: os blocos entram marcados como visíveis conforme aparecem na tela
+- **Galeria**: as fotos carregam quando entram na tela (elas usam carregamento tardio),
+  abrem ampliadas ao clique, navegam entre si e fecham com `Esc` ou pelo botão
+- **Menu no celular**: abre e fecha pelo botão, anuncia o estado para leitores de tela
+  (`aria-expanded` e `aria-label`) e fecha ao escolher um item
+
+### Por que testar uma página estática
+
+Os três erros mais comuns neste tipo de página não aparecem em revisão de código: imagem
+que não carrega por caminho errado, interação que quebra no celular e conteúdo que só
+existe se o JavaScript rodar. É exatamente o que a suíte verifica — e o mesmo tipo de
+defeito já foi encontrado em outro projeto desta conta (ícones com caminho absoluto
+quebrando no site publicado).
 
 ## ⚠️ Limitações conhecidas
 

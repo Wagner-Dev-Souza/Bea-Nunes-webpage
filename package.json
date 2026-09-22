@@ -1,0 +1,23 @@
+{
+  "name": "bea-nunes-webpage",
+  "version": "1.0.0",
+  "description": "Página institucional de atendimento veterinário domiciliar — com suíte de testes ponta a ponta.",
+  "private": true,
+  "scripts": {
+    "serve": "node scripts/servidor.js 8082",
+    "test": "cypress run",
+    "test:open": "cypress open"
+  },
+  "keywords": [
+    "cypress",
+    "testes-e2e",
+    "javascript",
+    "landing-page"
+  ],
+  "author": "Wagner Silva Souza",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^16.1.0",
+    "wait-on": "^8.0.1"
+  }
+}
